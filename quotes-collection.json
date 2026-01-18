@@ -1,0 +1,387 @@
+{
+  "quotes": [
+    {
+      "quote": "If you get in the habit of avoiding hard things, you lose the ability to do hard things.",
+      "author": "Courtland Allen",
+      "source": "https://twitter.com/csallen",
+      "category": "hard work",
+      "file": "quote on doing hard things.md"
+    },
+    {
+      "quote": "You only waste time if you're not intentional about how you spend it.",
+      "author": "Naval Ravikant",
+      "source": null,
+      "category": "productivity",
+      "file": "quote wasting time.md",
+      "context": "Naval Ravikant's notion that time is only well spent when you're doing what you want, earning, or learning."
+    },
+    {
+      "quote": "If you're an average player, you want to be left alone because you want to be able to slide by. If you're a good player, you want to be coached. If you're a great player, you want the coach to tell you the truth every day.",
+      "author": "Nick Saban",
+      "source": "https://twitter.com/asanwal/status/1826095095285706769",
+      "category": "mastery",
+      "file": "quotes on mastery.md"
+    },
+    {
+      "quote": "Two kinds of fools - those who take religion literally, and those who think it has no value.",
+      "author": "Naval Ravikant",
+      "source": "https://twitter.com/naval",
+      "category": "wisdom",
+      "file": "quote about the extremes in religionthoughtadvice.md"
+    },
+    {
+      "quote": "You're doing sales because you failed at marketing. You're doing marketing because you failed at product.",
+      "author": "Naval Ravikant",
+      "source": "https://twitter.com/naval",
+      "category": "business",
+      "file": "quote about the extremes in religionthoughtadvice.md"
+    },
+    {
+      "quote": "Blame yourself for everything, and preserve your agency.",
+      "author": "Naval Ravikant",
+      "source": "https://twitter.com/naval/status/1880400703455465572",
+      "category": "personal responsibility",
+      "file": "quote about the extremes in religionthoughtadvice.md"
+    },
+    {
+      "quote": "What saves a man is to take a step. Then another step. It is always the same step, but you have to take it.",
+      "author": "Antoine De Saint-Exupery",
+      "source": "fiveminutejournal.com",
+      "category": "action",
+      "file": "quotes.md"
+    },
+    {
+      "quote": "You will never find time for anything. You must make it.",
+      "author": "Charles Buxton",
+      "source": "fiveminutejournal.com",
+      "category": "time management",
+      "file": "quotes.md"
+    },
+    {
+      "quote": "The whole problem with the world is that fools and fanatics are always so certain of themselves, and wiser people so full of doubts.",
+      "author": "Bertrand Russell",
+      "source": null,
+      "category": "wisdom",
+      "file": "quotes.md"
+    },
+    {
+      "quote": "Adopt the pace of nature: her secret is patience.",
+      "author": "Ralph Waldo Emerson",
+      "source": null,
+      "category": "patience",
+      "file": "quotes.md"
+    },
+    {
+      "quote": "Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.",
+      "author": "Lao Tzu",
+      "source": "fiveminutejournal.com",
+      "category": "love",
+      "file": "quotes.md"
+    },
+    {
+      "quote": "Enlightenment is the quiet acceptance of what is.",
+      "author": "Wayne Dyer",
+      "source": null,
+      "category": "mindfulness",
+      "file": "quotes.md"
+    },
+    {
+      "quote": "Once you hear the details of victory, it is hard to distinguish it from a defeat.",
+      "author": "Jean-Paul Sartre",
+      "source": "fiveminutejournal.com",
+      "category": "perspective",
+      "file": "quotes.md"
+    },
+    {
+      "quote": "If life doesn't turn out exactly as you planned, don't be surprised. Life is the great unknown. Even though we plan and scheme and make millions of assumptions about the future, the truth is that we don't know what can happen in the next moment, let alone the next five weeks, months or years. So don't be surprised when things don't go according to your ideas, just relax and remember, life isn't personal, it's just life.",
+      "author": "Michael Kewley",
+      "source": null,
+      "category": "acceptance",
+      "file": "quotes on life.md"
+    },
+    {
+      "quote": "Attention is the most basic form of love. By paying attention we let ourselves be touched by life, and our hearts naturally become more open and engaged.",
+      "author": "Tara Brach",
+      "source": null,
+      "category": "mindfulness",
+      "file": "quotes on life.md"
+    },
+    {
+      "quote": "Someone who is writing three hours a day, five days a week, but really focused - the phone is away, deep focused writing, 15 hours a week; it's shocking how much you can produce. Add those weeks together, and 40 weeks later, you have a book, right? The difference between the prolific writer and the self-loathing person who doesn't write anything is one does 15 hours a week out of their 112 waking hours a week writing and the other one does zero out of 112 waking hours. So 1/7 versus 0/7. 6/7th of those two people's lives are the same. People who can't put something together have this daunting assumption that the prolific writer is fundamentally different, they're working constantly all the time. It doesn't have to be that way. It's consistency.",
+      "author": "Tim Urban",
+      "source": "waitbutwhy.com",
+      "category": "consistency",
+      "file": "quote on consistency.md",
+      "context": "Quote shared by Dickie Bush on Twitter about consistency in creative work"
+    },
+    {
+      "quote": "Kings are overrated and usually unhappy. It is much better to be kingmaker.",
+      "author": "Shreyas Doshi",
+      "source": "https://twitter.com/shreyas",
+      "category": "influence",
+      "file": "Shreyas note to selfquotes.md"
+    },
+    {
+      "quote": "Eventually, everyone realizes that they don't want to be Elon Musk or Steve Jobs. How quickly do you want to get there?",
+      "author": "Shreyas Doshi",
+      "source": "https://twitter.com/shreyas",
+      "category": "ambition",
+      "file": "Shreyas note to selfquotes.md"
+    },
+    {
+      "quote": "Legacy is overrated. So is impact.",
+      "author": "Shreyas Doshi",
+      "source": "https://twitter.com/shreyas",
+      "category": "perspective",
+      "file": "Shreyas note to selfquotes.md"
+    },
+    {
+      "quote": "Learn from everyone & everything. Don't view people as better or worse than you, worthy or unworthy of reaching you. And if something doesn't fully resonate, don't reject it wholesale. Extracting the useful bits and learn from those. Wisdom is everywhere, if you can spot it.",
+      "author": "Shreyas Doshi",
+      "source": "https://twitter.com/shreyas",
+      "category": "learning",
+      "file": "Shreyas note to selfquotes.md"
+    },
+    {
+      "quote": "When you find someone inspiring, try to separate their content and their charisma. And if it's the charisma that inspires, be very careful.",
+      "author": "Shreyas Doshi",
+      "source": "https://twitter.com/shreyas",
+      "category": "discernment",
+      "file": "Shreyas note to selfquotes.md"
+    },
+    {
+      "quote": "The chief indicator of authentic confidence isn't bravado. It's the person's openness to discovering why they're wrong.",
+      "author": "Shreyas Doshi",
+      "source": "https://twitter.com/shreyas",
+      "category": "confidence",
+      "file": "Shreyas note to selfquotes.md"
+    },
+    {
+      "quote": "Whatever industry or domain you are in is probably smaller than you imagine it is. People talk. Don't burn bridges over the small stuff.",
+      "author": "Shreyas Doshi",
+      "source": "https://twitter.com/shreyas",
+      "category": "relationships",
+      "file": "Shreyas note to selfquotes.md"
+    },
+    {
+      "quote": "When in doubt about where to take a job, pick the place with the better people. Even if it ends up being the wrong bet, you will still be more fulfilled with your work.",
+      "author": "Shreyas Doshi",
+      "source": "https://twitter.com/shreyas",
+      "category": "career",
+      "file": "Shreyas note to selfquotes.md"
+    },
+    {
+      "quote": "In the tech industry, things often change. Platforms change, technologies change, office signs change, employers change, centers of gravity change. The one thing that remains constant is: the people. Always optimize for the people.",
+      "author": "Shreyas Doshi",
+      "source": "https://twitter.com/shreyas",
+      "category": "people",
+      "file": "Shreyas note to selfquotes.md"
+    },
+    {
+      "quote": "If you choose to understand just one cognitive bias, let it be the Fundamental Attribution Error. If you choose to understand one more cognitive bias, let it be Confirmation Bias.",
+      "author": "Shreyas Doshi",
+      "source": "https://twitter.com/shreyas",
+      "category": "cognitive biases",
+      "file": "Shreyas note to selfquotes.md"
+    },
+    {
+      "quote": "No rule is valid for every single situation in life. Except this rule.",
+      "author": "Shreyas Doshi",
+      "source": "https://twitter.com/shreyas",
+      "category": "wisdom",
+      "file": "Shreyas note to selfquotes.md"
+    },
+    {
+      "quote": "The line that divides majority opinion from mass hysteria is often so fine as to be virtually invisible.",
+      "author": "Unknown",
+      "source": null,
+      "category": "critical thinking",
+      "file": "business quotes.md"
+    },
+    {
+      "quote": "I studied the lives of great men and women and I found that the men and women who got to the top were those who did the jobs they had in hand, with everything they had of energy, and enthusiasm, and hard work.",
+      "author": "Unknown",
+      "source": null,
+      "category": "success",
+      "file": "business quotes.md"
+    },
+    {
+      "quote": "You'll go much farther if you stop trying to look and act and think like everyone else.",
+      "author": "Unknown",
+      "source": null,
+      "category": "individuality",
+      "file": "business quotes.md"
+    },
+    {
+      "quote": "The primary function of management is to obtain results through people.",
+      "author": "Unknown",
+      "source": null,
+      "category": "management",
+      "file": "business quotes.md"
+    },
+    {
+      "quote": "The truly great leader views reverses calmly and coolly. He is fully aware that they are bound to occur occasionally and he refuses to be unnerved by them.",
+      "author": "Unknown",
+      "source": null,
+      "category": "leadership",
+      "file": "business quotes.md"
+    },
+    {
+      "quote": "Example is the best means to instruct or inspire others.",
+      "author": "Unknown",
+      "source": null,
+      "category": "leadership",
+      "file": "business quotes.md"
+    },
+    {
+      "quote": "The businessman must always be on his guard against the temptation to overexpand or launch expansion programs blindly. Forced growth can be fatal to any business, new or old.",
+      "author": "Unknown",
+      "source": null,
+      "category": "business growth",
+      "file": "business quotes.md"
+    },
+    {
+      "quote": "Guarantees should always be honored in the customer's favor.",
+      "author": "Unknown",
+      "source": null,
+      "category": "customer service",
+      "file": "business quotes.md"
+    },
+    {
+      "quote": "Ability and achievement are bona fides no one dares question, no matter how unconventional the man who presents them.",
+      "author": "Unknown",
+      "source": null,
+      "category": "merit",
+      "file": "business quotes.md"
+    },
+    {
+      "quote": "To be truly rich a man must live by his own values.",
+      "author": "Unknown",
+      "source": null,
+      "category": "wealth",
+      "file": "business quotes.md"
+    },
+    {
+      "quote": "A rich man is anyone who earns more than his wife's sister's husband.",
+      "author": "George Mack",
+      "source": "https://twitter.com/george__mack",
+      "category": "money",
+      "file": "quotes on money.md"
+    },
+    {
+      "quote": "Mansa Musa is supposedly the richest man ever. He was the emperor of Mali in the 14th century with an estimated $400 billion by today's standards. Have you ever heard of him or his currency? Probably not. All money scoreboards go back to 0 with enough time.",
+      "author": "George Mack",
+      "source": "https://twitter.com/george__mack",
+      "category": "money",
+      "file": "quotes on money.md"
+    },
+    {
+      "quote": "Money is the best video game ever created. Multi-player game with a simple infinite scoreboard.",
+      "author": "George Mack",
+      "source": "https://twitter.com/george__mack",
+      "category": "money",
+      "file": "quotes on money.md"
+    },
+    {
+      "quote": "If you neglect your children to play video games, it's a nationwide news story. If you neglect your children to play the money game, it's a Tuesday.",
+      "author": "George Mack",
+      "source": "https://twitter.com/george__mack",
+      "category": "money",
+      "file": "quotes on money.md"
+    },
+    {
+      "quote": "Choose your character in the money video game: Positive sum, negative-sum, or zero-sum.",
+      "author": "George Mack",
+      "source": "https://twitter.com/george__mack",
+      "category": "money",
+      "file": "quotes on money.md"
+    },
+    {
+      "quote": "Money unlocked society's ability to track and measure value. What metrics do we not currently track that would change society if we could?",
+      "author": "George Mack",
+      "source": "https://twitter.com/george__mack",
+      "category": "money",
+      "file": "quotes on money.md"
+    },
+    {
+      "quote": "The sandwich problem: One man tried to make a chicken sandwich from scratch. It cost him $1500 and took him 6 months. Money creates mass coordination between strangers to solve the sandwich problem.",
+      "author": "George Mack",
+      "source": "https://twitter.com/george__mack",
+      "category": "money",
+      "file": "quotes on money.md"
+    },
+    {
+      "quote": "School gives lots of people PTSD to mathematics. This PTSD crosses over into money. If you practice basic arithmetic, you're the one-eyed man in the world of the blind.",
+      "author": "George Mack",
+      "source": "https://twitter.com/george__mack",
+      "category": "money",
+      "file": "quotes on money.md"
+    },
+    {
+      "quote": "The idea of becoming a millionaire is like a 3-hour finish time in a marathon. It gives people a clear scoreboard to aim towards. What replaces the meme in a post-inflation world?",
+      "author": "George Mack",
+      "source": "https://twitter.com/george__mack",
+      "category": "money",
+      "file": "quotes on money.md"
+    }
+  ],
+  "metadata": {
+    "total_quotes": 49,
+    "total_files_processed": 10,
+    "extraction_date": "2026-01-17",
+    "source_vault": "EVERNOTE 2025/03 RESOURCES/quotes/",
+    "categories": [
+      "hard work",
+      "productivity",
+      "mastery",
+      "wisdom",
+      "business",
+      "personal responsibility",
+      "action",
+      "time management",
+      "patience",
+      "love",
+      "mindfulness",
+      "perspective",
+      "acceptance",
+      "consistency",
+      "influence",
+      "ambition",
+      "learning",
+      "discernment",
+      "confidence",
+      "relationships",
+      "career",
+      "people",
+      "cognitive biases",
+      "critical thinking",
+      "success",
+      "individuality",
+      "management",
+      "leadership",
+      "business growth",
+      "customer service",
+      "merit",
+      "wealth",
+      "money"
+    ],
+    "authors": [
+      "Courtland Allen",
+      "Naval Ravikant",
+      "Nick Saban",
+      "Antoine De Saint-Exupery",
+      "Charles Buxton",
+      "Bertrand Russell",
+      "Ralph Waldo Emerson",
+      "Lao Tzu",
+      "Wayne Dyer",
+      "Jean-Paul Sartre",
+      "Michael Kewley",
+      "Tara Brach",
+      "Tim Urban",
+      "Shreyas Doshi",
+      "George Mack",
+      "Unknown"
+    ]
+  }
+}
