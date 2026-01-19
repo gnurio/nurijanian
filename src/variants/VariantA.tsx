@@ -36,7 +36,7 @@ export default function VariantA() {
       <div className="bg-gradient-to-b from-[#ddd] to-[#ccc] border-b-2 border-[#999] px-2 sm:px-4 py-2 flex items-center justify-between shadow-sm">
         <div className="font-bold text-gray-800">
           <span className="sm:hidden">{profile.name.split(' ').map(n => n[0]).join('')}</span>
-          <span className="hidden sm:inline">{profile.name} - IRC Portfolio</span>
+          <span className="hidden sm:inline">{profile.name}</span>
         </div>
         <div className="text-xs text-gray-600">{currentTime}</div>
       </div>
