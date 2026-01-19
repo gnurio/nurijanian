@@ -25,7 +25,7 @@ export const profile = {
   title: "Product Manager",
   location: "online",
   status: "available",
-  bio: "Something others have said about me: 'Changes how teams think about customers and data. Ports mental models across any domain. Leaves people smarter than he found them.'"
+  bio: "product leader | builder | mentor | 'genuine pleasure to work with'"
 };
 
 export const projects: Project[] = [
