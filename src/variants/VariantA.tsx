@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Circle } from 'lucide-react';
-import { profile, projects, writing, quickLinks, socialLinks, appearances } from '../data/fixtures';
+import { profile, projects, writing, quickLinks, socialLinks, appearances, exaptationDefinition, exaptationEtymology, exaptationExamples } from '../data/fixtures';
 
 /**
  * VARIANT A: Classic IRC 3-Panel Layout
@@ -17,10 +17,11 @@ import { profile, projects, writing, quickLinks, socialLinks, appearances } from
  * - Compact information density
  */
 
-type Channel = 'about' | 'projects' | 'writing' | 'links';
+type Channel = 'about' | 'projects' | 'writing' | 'links' | 'curiosities';
 
 export default function VariantA() {
   const [activeChannel, setActiveChannel] = useState<Channel>('about');
+  const [curiositySubpage, setCuriositySubpage] = useState<string | null>(null);
   const currentTime = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
 
   const channels = [
@@ -28,6 +29,7 @@ export default function VariantA() {
     { id: 'projects' as Channel, label: '#projects', count: projects.length },
     { id: 'writing' as Channel, label: '#writing', count: writing.length },
     { id: 'links' as Channel, label: '#links', count: quickLinks.length + socialLinks.length },
+    { id: 'curiosities' as Channel, label: '#curiosities', count: 1 },
   ];
 
   return (
@@ -238,6 +240,89 @@ export default function VariantA() {
                     </div>
                   </div>
                 ))}
+              </>
+            )}
+
+            {activeChannel === 'curiosities' && (
+              <>
+                {curiositySubpage === null && (
+                  <>
+                    <div className="flex gap-3">
+                      <span className="hidden sm:inline text-gray-500">[{currentTime}]</span>
+                      <div>
+                        <span className="text-[#0066cc] font-bold">&lt;{profile.name}&gt;</span>
+                        <span className="text-gray-800"> Things I find interesting:</span>
+                      </div>
+                    </div>
+                    <div className="flex gap-3 ml-4 sm:ml-16">
+                      <span className="hidden sm:inline text-gray-500">[{currentTime}]</span>
+                      <div>
+                        <button
+                          onClick={() => setCuriositySubpage('exaptations')}
+                          className="text-blue-600 hover:underline text-left"
+                        >
+                          #exaptations
+                        </button>
+                        <span className="text-gray-600 text-xs ml-2">- when things get repurposed for a totally different role</span>
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {curiositySubpage === 'exaptations' && (
+                  <>
+                    <div className="flex gap-3">
+                      <span className="hidden sm:inline text-gray-500">[{currentTime}]</span>
+                      <div>
+                        <button
+                          onClick={() => setCuriositySubpage(null)}
+                          className="text-gray-500 italic hover:text-gray-700 text-xs"
+                        >
+                          ← back to #curiosities
+                        </button>
+                      </div>
+                    </div>
+                    <div className="flex gap-3 mt-2">
+                      <span className="hidden sm:inline text-gray-500">[{currentTime}]</span>
+                      <div>
+                        <span className="text-[#0066cc] font-bold">&lt;{profile.name}&gt;</span>
+                        <span className="text-gray-800 font-bold"> #exaptations</span>
+                      </div>
+                    </div>
+                    <div className="flex gap-3 ml-4 sm:ml-16">
+                      <span className="hidden sm:inline text-gray-500">[{currentTime}]</span>
+                      <div className="text-gray-700 text-xs leading-relaxed max-w-2xl">{exaptationDefinition}</div>
+                    </div>
+                    <div className="flex gap-3 ml-4 sm:ml-16 mt-1">
+                      <span className="hidden sm:inline text-gray-500">[{currentTime}]</span>
+                      <div className="text-gray-500 text-xs italic">{exaptationEtymology}</div>
+                    </div>
+                    <div className="flex gap-3 mt-4">
+                      <span className="hidden sm:inline text-gray-500">[{currentTime}]</span>
+                      <div>
+                        <span className="text-[#0066cc] font-bold">&lt;{profile.name}&gt;</span>
+                        <span className="text-gray-800"> Examples:</span>
+                      </div>
+                    </div>
+                    {exaptationExamples.map((example, idx) => (
+                      <div key={idx} className="ml-4 sm:ml-16 space-y-1">
+                        <div className="flex gap-3">
+                          <span className="hidden sm:inline text-gray-500">[{currentTime}]</span>
+                          <div>
+                            <a href={example.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">
+                              {example.title}
+                            </a>
+                            <span className="text-xs text-gray-500 ml-2">({example.domain})</span>
+                          </div>
+                        </div>
+                        <div className="flex gap-3">
+                          <span className="hidden sm:inline text-gray-500">[{currentTime}]</span>
+                          <div className="text-gray-700 ml-3 text-xs leading-relaxed max-w-2xl">→ {example.description}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </>
+                )}
               </>
             )}
           </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Circle, ChevronRight, Menu } from 'lucide-react';
-import { profile, projects, writing, quickLinks, socialLinks, appearances } from '../data/fixtures';
+import { profile, projects, writing, quickLinks, socialLinks, appearances, exaptationDefinition, exaptationEtymology, exaptationExamples } from '../data/fixtures';
 
 /**
  * VARIANT D: Linkinus-Style (Mac IRC Client)
@@ -18,17 +18,19 @@ import { profile, projects, writing, quickLinks, socialLinks, appearances } from
  * - Softer color palette
  */
 
-type Section = 'about' | 'projects' | 'writing' | 'links';
+type Section = 'about' | 'projects' | 'writing' | 'links' | 'curiosities';
 
 export default function VariantD() {
   const [activeSection, setActiveSection] = useState<Section>('about');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [curiositySubpage, setCuriositySubpage] = useState<string | null>(null);
 
   const sections = [
     { id: 'about' as Section, label: 'About', color: 'bg-blue-500' },
     { id: 'projects' as Section, label: 'Projects', color: 'bg-green-500' },
     { id: 'writing' as Section, label: 'Writing', color: 'bg-purple-500' },
     { id: 'links' as Section, label: 'Links', color: 'bg-orange-500' },
+    { id: 'curiosities' as Section, label: 'Curiosities', color: 'bg-teal-500' },
   ];
 
   return (
@@ -316,6 +318,77 @@ export default function VariantD() {
                   ))}
                 </div>
               </div>
+            </div>
+          )}
+
+          {activeSection === 'curiosities' && (
+            <div className="max-w-3xl">
+              {curiositySubpage === null && (
+                <div className="space-y-4">
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Things I find interesting — collected here.
+                  </p>
+                  <div
+                    onClick={() => setCuriositySubpage('exaptations')}
+                    className="group border border-gray-200 hover:border-teal-300 rounded-lg p-4 transition-all hover:shadow-sm cursor-pointer"
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1 min-w-0">
+                        <div className="font-bold text-gray-900 group-hover:text-teal-600 transition-colors flex items-center gap-2">
+                          Exaptations
+                          <ChevronRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </div>
+                        <p className="text-sm text-gray-600 mt-1">
+                          When things get repurposed for a totally different role — a concept from evolutionary biology that maps neatly onto technology, AI, and how ideas spread.
+                        </p>
+                      </div>
+                      <Circle size={10} fill="#14b8a6" className="text-teal-500 flex-shrink-0 mt-1" />
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {curiositySubpage === 'exaptations' && (
+                <div className="space-y-6">
+                  <button
+                    onClick={() => setCuriositySubpage(null)}
+                    className="text-xs text-gray-500 hover:text-teal-600 transition-colors flex items-center gap-1"
+                  >
+                    ← Curiosities
+                  </button>
+
+                  <div>
+                    <h2 className="text-lg font-bold text-gray-900 mb-3">Exaptations</h2>
+                    <p className="text-sm text-gray-700 leading-relaxed">{exaptationDefinition}</p>
+                    <p className="text-xs text-gray-500 italic mt-3">{exaptationEtymology}</p>
+                  </div>
+
+                  <div className="pt-2 border-t border-gray-200">
+                    <h3 className="text-sm font-bold text-gray-700 mb-3 uppercase tracking-wide">Examples</h3>
+                    <div className="space-y-3">
+                      {exaptationExamples.map((example, idx) => (
+                        <div
+                          key={idx}
+                          className="border-l-2 border-gray-200 hover:border-teal-500 pl-4 py-2 transition-all"
+                        >
+                          <a
+                            href={example.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-medium text-gray-900 hover:text-teal-600 transition-colors block"
+                          >
+                            {example.title}
+                          </a>
+                          <div className="text-xs text-gray-500 mt-1 mb-2">
+                            <span className="capitalize">{example.domain}</span>
+                          </div>
+                          <p className="text-sm text-gray-600 leading-relaxed">{example.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>

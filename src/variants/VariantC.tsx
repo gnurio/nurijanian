@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Minus, Square, X, Folder, FileText, User } from 'lucide-react';
-import { profile, projects, writing, quickLinks, socialLinks, appearances } from '../data/fixtures';
+import { Minus, Square, X, Folder, FileText, User, BookOpen } from 'lucide-react';
+import { profile, projects, writing, quickLinks, socialLinks, appearances, exaptationDefinition, exaptationEtymology, exaptationExamples } from '../data/fixtures';
 
 /**
  * VARIANT C: Windows 95/98 Style
@@ -18,15 +18,17 @@ import { profile, projects, writing, quickLinks, socialLinks, appearances } from
  * - Nostalgic OS UI patterns
  */
 
-type WindowType = 'about' | 'projects' | 'writing';
+type WindowType = 'about' | 'projects' | 'writing' | 'curiosities';
 
 export default function VariantC() {
   const [activeWindow, setActiveWindow] = useState<WindowType>('about');
+  const [curiositySubpage, setCuriositySubpage] = useState<string | null>(null);
 
   const windows = [
     { id: 'about' as WindowType, title: 'About.txt', icon: User },
     { id: 'projects' as WindowType, title: 'My Projects', icon: Folder },
     { id: 'writing' as WindowType, title: 'Writing', icon: FileText },
+    { id: 'curiosities' as WindowType, title: 'Curiosities', icon: BookOpen },
   ];
 
   const Window = ({ type, title, icon: Icon, children }: { type: WindowType; title: string; icon: any; children: React.ReactNode }) => {
@@ -230,6 +232,62 @@ export default function VariantC() {
               </div>
             ))}
           </div>
+        </Window>
+
+        <Window type="curiosities" title="Curiosities" icon={BookOpen}>
+          {curiositySubpage === null && (
+            <div className="space-y-3">
+              <div className="border-l-4 border-[#0000aa] pl-4 mb-4">
+                <div className="font-bold text-base">Curiosities</div>
+                <div className="text-xs text-gray-600 mt-1">Things I find interesting — collected here.</div>
+              </div>
+              <button
+                onClick={() => setCuriositySubpage('exaptations')}
+                className="w-full text-left border-2 border-[#c0c0c0] border-t-white border-l-white border-r-[#808080] border-b-[#808080] p-3 bg-[#f0f0f0] hover:bg-[#e0e0ff] transition-colors flex items-center gap-3"
+              >
+                <FileText size={20} className="text-[#0000aa] flex-shrink-0" />
+                <div>
+                  <div className="font-bold text-sm text-blue-700">Exaptations.txt</div>
+                  <div className="text-xs text-gray-600">When things get repurposed for a totally different role</div>
+                </div>
+              </button>
+            </div>
+          )}
+
+          {curiositySubpage === 'exaptations' && (
+            <div className="space-y-4">
+              <div className="flex items-center gap-2 mb-2">
+                <button
+                  onClick={() => setCuriositySubpage(null)}
+                  className="border-2 border-t-white border-l-white border-r-[#808080] border-b-[#808080] bg-[#c0c0c0] px-3 py-0.5 text-xs hover:bg-[#d0d0d0] active:border-t-[#808080] active:border-l-[#808080] active:border-r-white active:border-b-white"
+                >
+                  ← Back
+                </button>
+                <span className="text-xs text-gray-600">Curiosities\Exaptations.txt</span>
+              </div>
+              <div className="border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white bg-white p-3 space-y-3">
+                <div className="font-bold text-[#0000aa] text-sm">EXAPTATIONS</div>
+                <div className="text-xs text-gray-700 leading-relaxed">{exaptationDefinition}</div>
+                <div className="text-xs text-gray-500 italic border-t border-gray-300 pt-2">{exaptationEtymology}</div>
+              </div>
+              <div className="font-bold text-xs text-[#0000aa] mt-4">EXAMPLES</div>
+              <div className="space-y-2">
+                {exaptationExamples.map((example, idx) => (
+                  <a
+                    key={idx}
+                    href={example.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block border-2 border-[#c0c0c0] border-t-white border-l-white border-r-[#808080] border-b-[#808080] p-2 bg-white hover:bg-[#0000aa] hover:text-white transition-colors group"
+                  >
+                    <div className="font-bold text-sm">{example.title}</div>
+                    <div className="text-xs opacity-80 mt-1 leading-relaxed">{example.description}</div>
+                    <div className="text-xs mt-1 opacity-60 group-hover:opacity-80">[{example.domain}]</div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
         </Window>
 
       </div>
