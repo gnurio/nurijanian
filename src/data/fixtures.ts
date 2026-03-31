@@ -3,6 +3,10 @@
 
 import { writingItems, WritingItem } from './writing';
 import { appearances } from './appearances';
+import { exaptationDefinition, exaptationEtymology, exaptationExamples, ExaptationExample } from './curiosities';
+
+export { exaptationDefinition, exaptationEtymology, exaptationExamples };
+export type { ExaptationExample };
 
 export interface Project {
   title: string;

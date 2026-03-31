@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { profile, projects, writing, quickLinks, socialLinks, appearances } from '../data/fixtures';
+import { profile, projects, writing, quickLinks, socialLinks, appearances, exaptationDefinition, exaptationEtymology, exaptationExamples } from '../data/fixtures';
 
 /**
  * VARIANT B: Terminal/Command Line
@@ -17,10 +17,11 @@ import { profile, projects, writing, quickLinks, socialLinks, appearances } from
  * - Hacker/tech aesthetic
  */
 
-type View = 'home' | 'projects' | 'writing' | 'links';
+type View = 'home' | 'projects' | 'writing' | 'links' | 'curiosities';
 
 export default function VariantB() {
   const [currentView, setCurrentView] = useState<View>('home');
+  const [curiositySubpage, setCuriositySubpage] = useState<string | null>(null);
 
   const getCurrentTime = () => {
     return new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
@@ -70,7 +71,12 @@ export default function VariantB() {
               </div>
               <div className="ml-4">
                 <button onClick={() => setCurrentView('links')} className="hover:text-green-300 transition-colors">
-                  • links    - Quick links and social
+                  • links       - Quick links and social
+                </button>
+              </div>
+              <div className="ml-4">
+                <button onClick={() => { setCurrentView('curiosities'); setCuriositySubpage(null); }} className="hover:text-green-300 transition-colors">
+                  • curiosities - Things I find interesting
                 </button>
               </div>
             </div>
@@ -190,6 +196,67 @@ export default function VariantB() {
                     ))}
                   </div>
                 </div>
+              </>
+            )}
+
+            {currentView === 'curiosities' && (
+              <>
+                {curiositySubpage === null && (
+                  <>
+                    <div className="text-green-500">
+                      <span className="text-green-600">user@portfolio:~$</span> ls ~/curiosities/
+                    </div>
+                    <div className="ml-4 space-y-2 text-green-400/90">
+                      <div className="text-green-500/80">COLLECTIONS:</div>
+                      <div className="ml-2">
+                        <button
+                          onClick={() => setCuriositySubpage('exaptations')}
+                          className="text-green-300 hover:underline text-left"
+                        >
+                          drwxr-xr-x  exaptations/
+                        </button>
+                        <span className="text-xs text-green-600 ml-2"># when things get repurposed for a totally different role</span>
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {curiositySubpage === 'exaptations' && (
+                  <>
+                    <div className="text-green-500">
+                      <span className="text-green-600">user@portfolio:~$</span> cat ~/curiosities/exaptations.md
+                    </div>
+                    <div className="ml-4 space-y-3 text-green-400/90">
+                      <div className="text-green-500/80"># EXAPTATIONS</div>
+                      <div className="text-xs leading-relaxed max-w-2xl">{exaptationDefinition}</div>
+                      <div className="text-xs text-green-600 italic">{exaptationEtymology}</div>
+                      <div className="pt-2 border-t border-green-900">
+                        <div className="text-green-500/80 mb-2">## EXAMPLES</div>
+                        {exaptationExamples.map((example, idx) => (
+                          <div key={idx} className="mb-3">
+                            <div>
+                              → <a href={example.url} target="_blank" rel="noopener noreferrer" className="text-green-300 hover:underline font-medium">
+                                {example.title}
+                              </a>
+                              <span className="text-xs text-green-600 ml-2">[{example.domain}]</span>
+                            </div>
+                            <div className="ml-4 text-xs text-green-400/70 leading-relaxed max-w-2xl mt-1">
+                              {example.description}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="pt-2 border-t border-green-900">
+                        <button
+                          onClick={() => setCuriositySubpage(null)}
+                          className="text-green-600 hover:text-green-400 text-xs"
+                        >
+                          &lt; cd ~/curiosities/
+                        </button>
+                      </div>
+                    </div>
+                  </>
+                )}
               </>
             )}
 
